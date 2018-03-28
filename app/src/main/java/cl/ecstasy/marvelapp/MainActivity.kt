@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         bt_informacion.setOnClickListener({
 
-            Toast.makeText(this, "holiiii ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "holiiii NENA", Toast.LENGTH_SHORT).show()
 
         })
     }
