@@ -15,8 +15,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="7dp"
-        android:background="@drawable/marvel_info"
-        android:text="INFORMACIÓN" />
+        android:background="@drawable/marvel_bt1"
+        android:text="INFORMACIÓN"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_chat_general"
@@ -26,7 +28,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_informacion"
         android:layout_marginTop="7dp"
-        android:text="CHAT GENERAL" />
+        android:background="@drawable/marvel_bt2"
+        android:text="CHAT GENERAL"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_chat_grupal"
@@ -36,7 +41,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_chat_general"
         android:layout_marginTop="7dp"
-        android:text="CHAT GRUPAL" />
+        android:background="@drawable/marvel_bt3"
+        android:text="CHAT GRUPAL"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px" />
 
     <Button
         android:id="@+id/bt_donaciones_minimos"
@@ -46,7 +54,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_chat_grupal"
         android:layout_marginTop="7dp"
-        android:text="DONACIONES/MINIMOS" />
+        android:background="@drawable/marvel_bt4"
+        android:text="DONACIONES/MINIMOS"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_sanciones"
@@ -56,7 +67,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_donaciones_minimos"
         android:layout_marginTop="7dp"
-        android:text="SANCIONES/MULTAS" />
+        android:background="@drawable/marvel_bt5"
+        android:text="SANCIONES/MULTAS"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_gesta"
@@ -66,7 +80,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_sanciones"
         android:layout_marginTop="7dp"
-        android:text="GESTA" />
+        android:background="@drawable/marvel_bt6"
+        android:text="GESTA"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_guerra"
@@ -76,7 +93,10 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_gesta"
         android:layout_marginTop="7dp"
-        android:text="GUERRA" />
+        android:background="@drawable/marvel_bt7_canotipo"
+        android:text="GUERRA"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 
     <Button
         android:id="@+id/bt_teams"
@@ -86,5 +106,8 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/bt_guerra"
         android:layout_marginTop="7dp"
-        android:text="COMBINACIONES" />
+        android:background="@drawable/marvel_bt8_sepia"
+        android:text="COMBINACIONES"
+        android:textColor="@android:color/background_light"
+        android:textSize="25px"/>
 </RelativeLayout>
