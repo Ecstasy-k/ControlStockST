@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/marvel"
-    tools:context="cl.ecstasy.marvelapp.MainActivity">
+    tools:context="cl.ecstasy.marvelapp.controller.MenuPrincipal">
 
     <Button
         android:id="@+id/bt_informacion"
