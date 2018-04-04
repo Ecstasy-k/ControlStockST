@@ -1,8 +1,13 @@
 Create table user(correo varchar(50) primary key, pass varchar(64) not null, nombre varchar(20) unique not null, id_personaje int, id_grupo int, tipo_user int);
-Create table alianza(id_alianza int primary key, nombre varchar(30) unique not null, abr varchar(5) not null, total_int int not null, fecha_creacion datetime not null);
-Create table grupo(id_grupo int primary key, n_grupo int(1) not null, total_int int(2) not null, id_alianza int not null);
+Create table alianza(id_alianza int autoincrement primary key, nombre varchar(30) unique not null, abr varchar(5) not null, total_int int not null, fecha_creacion datetime not null);
+Create table grupo(id_grupo int autoincrement primary key, n_grupo int(1) not null, total_int int(2) not null, id_alianza int not null);
 Create table mision_grupo(id_grupo int not null, id_mision int not null, p_esperado int not null, p_minimo int not null);
-Create table misiones(id_mision int primary key, nombre_mision varchar(30) not null);
-Create table donaciones(id_donacion int primary key, id_grupo int not null, oro int not null, i_versus int not null, i_alianza int not null);
-Create table 
+Create table misiones(id_mision int autoincrement primary key, nombre_mision varchar(30) not null);
+Create table donaciones(id_donacion int autoincrement primary key, id_grupo int not null, oro int not null, i_versus int not null, i_alianza int not null);
+Create table info_ali(id_alianza int not null, id_info int autoincrement primary key, fecha_info datetime not null, descripcion varchar(300) not null, titulo varchar(100) not null, estado int(1) not null);
+Create table sanciones(id_sancion int autoincrement primary key, correo varchar(50) not null, id_alianza int not null, descripcion varchar(300), monto int not null, tipo int(1) not null, estado int(1) not null);
+Create table notificacion(id_not int autoincrement primary key, id_alianza int not null, correo varchar(50) not null, texto varchar(300) not null, titulo varchar(100) not null, icono varchar(200) not null, tipo int(1) not null, estado int(1) not null);
+Create table alianza_personaje(id_alianza int not null, id_personaje int not null, comentario varchar(200) not null, tipo int(1) not null, estado int(1) not null);
+Create table personaje(id_personaje int autoincrement primary key, nombre varchar(30) not null, miniatura varchar(200) not null, estado int(1) not null);
+
 
