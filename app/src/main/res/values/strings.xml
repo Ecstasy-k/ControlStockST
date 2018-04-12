@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ControlStockST</string>
+    <string name="title_activity_splash_screen">Control Stock</string>
 </resources>
