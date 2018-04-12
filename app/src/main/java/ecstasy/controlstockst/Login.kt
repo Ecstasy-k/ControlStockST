@@ -63,24 +63,17 @@ class Login : AppCompatActivity() {
             transporte.call(SOAP_ACTION, envelope)
             val resultado_xml = envelope.response
             val datosUser = resultado_xml.toString()
-            Toast.makeText(this, "los datos son: $datosUser ", Toast.LENGTH_SHORT).show()
-            if (datosUser.compareTo("error") != 0)
-            {
+            if (datosUser.compareTo("error") != 0) {
 
                 val datillos = datosUser.split(",")
 
-                 nombreUser = datillos.get(0)
-                 tipoUser = datillos.get(1).trim().toInt()
-                 rutUser = datillos.get(2).trim()
+                nombreUser = datillos.get(0)
+                tipoUser = datillos.get(1).trim().toInt()
+                rutUser = datillos.get(2).trim()
             }
-            else
-            {
-                 tipoUser = 0
-            }
-
             if (tipoUser > 0)
             {
-                Toast.makeText(this, "BIENVENIDO $user!!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "BIENVENIDO $nombreUser!!", Toast.LENGTH_SHORT).show()
                 txt_resultado.text = ""
                 val intent = Intent(this, MenuPrincipal::class.java)
                 intent.putExtra("Sesion_val", tipoUser)
@@ -93,7 +86,7 @@ class Login : AppCompatActivity() {
                 txt_resultado.text = "Usuario y contraseña NO VÁLIDOS"
                 et_usuario.setText("")
                 et_passwd.setText("")
-                et_usuario.hasFocus()
+
             }
         }
         catch (e:Exception)

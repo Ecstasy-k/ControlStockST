@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/nv_ingresaRecursos"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_activity_ingresa_recursos" />
+
+    <item
+        android:id="@+id/nv_registraUso"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_activity_registra_uso" />
+    <group
+        android:id="@+id/nvg_consultaDatos"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_consulta_datos"
+        >
+        <item
+            android:id="@+id/nv_consultaRecursos"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/title_consulta_recursos" />
+        <item
+            android:id="@+id/nv_consultaHistorial"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/title_consulta_historial" />
+    </group>
+    <item
+        android:id="@+id/nv_cerrarSesion"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_cerrar_sesion" />
+
+
+</menu>
