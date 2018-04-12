@@ -1,5 +1,6 @@
 package ecstasy.controlstockst
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -17,11 +18,15 @@ import android.os.StrictMode
 class Login : AppCompatActivity() {
 
     private val NAMESPACE = "http://tempuri.org/"
-    private val METHOD_NAME = "LoginWM"
+    private val METHOD_NAME = "UserFullWM"
 
-    private val SOAP_ACTION = "http://tempuri.org/LoginWM"
+    private val SOAP_ACTION = "http://tempuri.org/UserFullWM"
 
     private val URL = "http://190.121.13.170/WSStock/Service.asmx?WSDL"
+
+    var tipoUser : Int = 0
+    var nombreUser : String = ""
+    var rutUser : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +47,10 @@ class Login : AppCompatActivity() {
 
      private fun login(user: String, pass: String)
     {
-        Toast.makeText(this, "Variables $user , $pass", Toast.LENGTH_SHORT).show()
+     //   Toast.makeText(this, "Variables $user , $pass", Toast.LENGTH_SHORT).show()
         val request = SoapObject(NAMESPACE, METHOD_NAME)
         request.addProperty("userWM", user)
-        request.addProperty("passwordWM", pass)
+        request.addProperty("passWM", pass)
 
         val envelope = SoapSerializationEnvelope(SoapEnvelope.VER11)
         envelope.dotNet = true;
@@ -57,8 +62,39 @@ class Login : AppCompatActivity() {
         {
             transporte.call(SOAP_ACTION, envelope)
             val resultado_xml = envelope.response
-            val siOno = resultado_xml.toString()
-            txt_resultado.text = "Proceso con éxito, el valor obtenido es: $siOno"
+            val datosUser = resultado_xml.toString()
+            Toast.makeText(this, "los datos son: $datosUser ", Toast.LENGTH_SHORT).show()
+            if (datosUser.compareTo("error") != 0)
+            {
+
+                val datillos = datosUser.split(",")
+
+                 nombreUser = datillos.get(0)
+                 tipoUser = datillos.get(1).trim().toInt()
+                 rutUser = datillos.get(2).trim()
+            }
+            else
+            {
+                 tipoUser = 0
+            }
+
+            if (tipoUser > 0)
+            {
+                Toast.makeText(this, "BIENVENIDO $user!!", Toast.LENGTH_SHORT).show()
+                txt_resultado.text = ""
+                val intent = Intent(this, MenuPrincipal::class.java)
+                intent.putExtra("Sesion_val", tipoUser)
+                intent.putExtra("usuarioNombre", nombreUser)
+                intent.putExtra("usuarioRut", rutUser)
+                startActivity(intent)
+            }
+            else
+            {
+                txt_resultado.text = "Usuario y contraseña NO VÁLIDOS"
+                et_usuario.setText("")
+                et_passwd.setText("")
+                et_usuario.hasFocus()
+            }
         }
         catch (e:Exception)
         {
@@ -67,6 +103,9 @@ class Login : AppCompatActivity() {
             val exceptionasstring = sw.toString()
 
             txt_resultado.text = "ERROR!" + exceptionasstring
+
+
+
         }
     }
 }
