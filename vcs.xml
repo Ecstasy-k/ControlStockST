@@ -6,6 +6,10 @@
           <option name="url" value="https://github.com/Ecstasy-k/ControlStockST.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/Ecstasy-k/MarvelApp.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\jorge\AndroidStudioProjects" />
