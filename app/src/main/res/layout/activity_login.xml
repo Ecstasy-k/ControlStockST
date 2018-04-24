@@ -1,109 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cl.ecstasy.marvelapp.controller.Login">
+    android:background="@drawable/fondoinicio480por800"
+    tools:context="ecstasy.controlstockst.Login"
+    android:orientation="vertical">
 
-    <!-- Login progress -->
 
-    <LinearLayout
-        android:id="@+id/login_status"
+    <TextView
+        android:id="@+id/tv_iniciarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="INICIAR SESION"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:layout_marginTop="60px"
+        android:layout_marginLeft="60px"
+        android:text="Usuario:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+    <EditText
+        android:id="@+id/et_usuario"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60px"
+        android:ems="10"
+        android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/login_status_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="sans-serif-light"
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:layout_marginLeft="60px"
+        android:text="Password:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/et_passwd"
+        android:layout_width="323dp"
+        android:layout_marginLeft="60px"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
 
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="323dp"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp" />
 
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="323dp"
+        android:layout_marginTop="60px"
+        android:layout_marginLeft="60px"
+        android:layout_height="wrap_content"
+        android:text="LOGUEAR" />
 
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
-
-
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:text="@string/tx_texto"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <EditText
-                android:id="@+id/tx_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/tx_email"
-                android:inputType="textEmailAddress"
-                android:maxLength="50"
-                android:maxLines="1"
-                android:singleLine="true" />
-
-            <EditText
-                android:id="@+id/tx_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/tx_password"
-
-                android:imeActionLabel="aaa"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
-                android:maxLength="20"
-                android:maxLines="1"
-                android:singleLine="true" />
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-
-
-                <Button
-                    android:id="@+id/sign_in_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="16dp"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="32dp"
-                    android:text="@string/tx_ingresar"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </ScrollView>
-
-
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

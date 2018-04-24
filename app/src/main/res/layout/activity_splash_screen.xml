@@ -4,7 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/marvel"
-    tools:context="cl.ecstasy.marvelapp.controller.SplashScreenActivity">
+    android:background="@drawable/fondoinicio480por800"
+    tools:context="ecstasy.controlstockst.SplashScreen">
+
+    <TextView
+        android:id="@+id/tv_herramientas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_inventario"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:text="HERRAMIENTAS"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_inventario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_control"
+        android:layout_centerHorizontal="true"
+        android:text="INVENTARIO"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_control"
+        android:layout_alignLeft="@+id/tv_inventario"
+        android:layout_alignStart="@+id/tv_inventario"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        app:srcCompat="@drawable/surtracklogo" />
+
+    <TextView
+        android:id="@+id/tv_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="79dp"
+        android:layout_marginStart="79dp"
+        android:text="CONTROL"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

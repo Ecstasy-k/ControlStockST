@@ -1,10 +1,4 @@
 <resources>
-    <string name="app_name">MarvelApp</string>
-    <string name="title_activity_identificacion">Identificacion</string>
-    <!-- String Pantalla Login -->
-    <string name="tx_texto">Para ingresar debe llenar los sgtes campos</string>
-    <string name="tx_password">Password</string>
-    <string name="tx_email">Email</string>
-    <string name="tx_ingresar">Ingresar</string>
-
+    <string name="app_name">ControlStockST</string>
+    <string name="title_activity_splash_screen">Control Stock</string>
 </resources>
